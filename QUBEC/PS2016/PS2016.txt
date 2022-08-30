@@ -1,4 +1,5 @@
 City Code,Province Code,Country Code,City Name,Province Name,Country Name
+CENAI,TN,IN,Chennai,Tamil Nadu,India
 PUNCH,JK,IN,Punch,Jammu and Kashmir,India
 KLRAI,TN,IN,Keelakarai,Tamil Nadu,India
 TIRAP,AR,IN,Tirap,Arunachal Pradesh,India
@@ -992,7 +993,6 @@ MAGHR,UP,IN,Maghar,Uttar Pradesh,India
 MAGDI,KA,IN,Magadi,Karnataka,India
 MDURI,TN,IN,Madurai,Tamil Nadu,India
 MADUK,TN,IN,Madukkur,Tamil Nadu,India
-CENAI,TN,IN,Chennai,Tamil Nadu,India
 MAIER,KA,IN,Madikeri,Karnataka,India
 MDHYR,WB,IN,Madhyamgram,West Bengal,India
 MADPR,JH,IN,Madhupur,Jharkhand,India
@@ -77399,3 +77399,4 @@ SWLMN,KY,US,South Williamson,Kentucky,United States
 SOWAE,KA,IN,Somwarpet,Karnataka,India
 PUATR,AP,IN,Pusapatirega,Andhra Pradesh,India
 DEVUA,KL,IN,Devikulam,Kerala,India
+DEVUA,KL,IN,HUBLI,KARNATAKA,INDIA
