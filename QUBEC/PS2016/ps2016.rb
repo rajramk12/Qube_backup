@@ -39,7 +39,12 @@
       @@city, @@states, @@world = get_csv(partner,true) if !partner.empty?
       ## get initial Users
       get_csv(permission,false) if !permission.empty?
+      @@states.sort_by {|k, v| v}.to_h
+      @@city.sort_by {|k, v| v}.to_h
+      @@world.sort_by {|k, v| v}.to_h
+      @@permission.sort_by {|k, v| v}.to_h
     end
+
 
     def get_state(in_location)
       @@states.fetch(in_location)
@@ -124,7 +129,6 @@
               user1[:excluded].each do |loc|
                 if check_location(to_check,valid_location(loc),true)
                   @@excluded+=1
-                  excluded.store(loc, loc)
                 end
               end
             if user1[:included] != :included
@@ -198,7 +202,6 @@
                         @@permission.store(user[:name],user)
                       end
                     end
-
                     user = User.new(:name, :inherited,:included, :excluded)
                     included=[]
                     excluded=[]
@@ -224,10 +227,9 @@
             user[:included] = included if !included.empty?
             user[:excluded] = excluded if !excluded.empty?
             user[:inherited] = inherited if !inherited.empty?
-            # binding.break
             user[:included].each do |city|
               if !processing_logic(user, city)
-                puts "Parent Authorization missin for #{city}"
+                puts "Parent Authorization missing for #{city}"
                 next
               else
                 @@permission.store(user[:name],user)
